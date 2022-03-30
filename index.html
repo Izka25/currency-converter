@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://www.nbp.pl/home.aspx?f=/kursy/kursya.html">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    
+    <form class="js-form">
+        <fielset>
+            <legend class="legend">
+                Kalkulator walutowy
+            </legend>
+            <p>
+                <label class="label">
+                   Kwota: <input class="js-cash cash" type="number" placeholder= "Kwota" name="cash" step="1" min="1" autofocus>
+                   
+                    
+
+                </label>
+            </p>
+            <p>
+                <label class="label">
+
+                    
+                    Waluta: <input class="js-currency currency" type="tekst" name="currency" placeholder="Wybór waluty" list="currency">
+                    <datalist id="currency">
+                        
+                        <option value="eur">EUR-Euro</option>
+                        <option value="aud">AUD-Dolar australijski</option>
+                        <option value="gbp">GBP-Funt brytyjski</option>
+                        <option value="jpy">JPY-Jen japoński</option>
+                        <option value="chf">CHF-Frank szwajcarski</option>
+                        <option value="usd">USD-Dolar amerykański</option>
+                        <option value="hkd">HKD-Dolar hongkongu</option>
+                        <option value="cad">CAD-Dolar kanadyjski</option>
+                        <option value="nzd">NZD-Dolar Nowozelandzki</option>
+                        <option value="sgd">SGD-Dolar Singapurski</option>  
+                    
+                </label>
+            </p>
+           
+        
+        <p>
+            <button class="js-submit button">Przelicz walutę!</button>
+        </p>
+    
+    <p class="label">
+        Wychodzi:<strong class="js-result">N/A</strong>
+    </p>
+</fielset>
+</form>
+  </div>
+    
+</body>
+</html>
