@@ -1,89 +1,109 @@
-let cashElement= document.querySelector(".js-cash");
+{
+    const calculateResult = (cash, currency) => {
+        const eur = 4.56;
+        const aud = 2.87;
+        const gbp = 5.38;
+        const jpy = 3.45;
+        const chf = 4.30;
+        const usd = 3.97;
+        const hkd = 0.51;
+        const cad = 3.12;
+        const nzd = 2.64;
+        const sgd = 2.95;
 
-let currencyElement= document.querySelector(".js-currency");
-let formElement= document.querySelector(".js-form");
-let resultElement= document.querySelector(".js-result");
+        switch (currency) {
+            case "eur":
 
-//console.log(currency);
-
-
-let eur = 4.56;
-let aud = 2.87;
-let gbp = 5.38;
-let jpy = 3.45;
-let chf = 4.30;
-let usd = 3.97;
-let hkd = 0.51;
-let cad = 3.12;
-let nzd = 2.64;
-let sgd = 2.95;
+                return cash / eur;
 
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault(); 
-
-    let currency = currencyElement.value;
-    let cash = cashElement.value;
-let result;
-
-    switch(currency) {
-        case"eur":
-        
-       result=cash / eur;
-        break;
-
-        case"aud":
-        result = cash / aud;
-        break;
-
-        case "gbp":
-      result = cash / gbp;
-      break;
-      
-       case "jpy":
-      result = cash / jpy;
-      break;
-      
-       case "chf":
-      result = cash / chf;
-      break;
-      
-       case "usd":
-      result = cash / usd;
-      break;
-      
-       case "hkd":
-      result = cash / hkd;
-      break;
-      
-       case "cad":
-      result = cash / cad;
-      break;
-      
-       case "nzd":
-      result = cash / nzd;
-      break;
-      
-       case "sgd":
-      result = cash / sgd;
-      break;
-  }
-    
-
-  resultElement.innerText = `Wychodzi:${result}`; 
-  resultElement.innerText = result.toFixed(2);
-
-});
-
-    
+            case "aud":
+                return cash / aud;
 
 
-    //let cash= cashElement.value;
-    //let currencytwo= currencytwoElement.value;
+            case "gbp":
+                return cash / gbp;
+
+
+            case "jpy":
+                return cash / jpy;
+
+
+            case "chf":
+                return cash / chf;
+
+
+            case "usd":
+                return cash / usd;
+
+
+            case "hkd":
+                return cash / hkd;
+
+
+            case "cad":
+                return cash / cad;
+
+
+            case "nzd":
+                return cash / nzd;
+
+
+            case "sgd":
+                return cash / sgd;
+
+        }
+    };
+
+    const updateResultText = (cash, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+
+        resultElement.innerText = `Wychodzi:${result}`;
+        resultElement.innerText = result.toFixed(2);
+
+    }
+
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        const cashElement = document.querySelector(".js-cash");
+        const currencyElement = document.querySelector(".js-currency");
+
+
+
+        const currency = currencyElement.value;
+        const cash = cashElement.value;
+
+        const result = calculateResult(cash, currency);
+
+
+        updateResultText(cash, result, currency);
+
+
+
+    };
+
+
+
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
+    };
+
+    init();
+
+
+    //const cash= cashElement.value;
+    //const currencytwo= currencytwoElement.value;
 
     //console.log(cash, currencytwo);
 
-    //let wynik= cash * currencytwo;
-   // console.log(wynik);
+    //const wynik= cash * currencytwo;
+    // console.log(wynik);
 
 
+
+}
