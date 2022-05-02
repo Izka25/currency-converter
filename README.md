@@ -20,3 +20,6 @@ You can convert currencies such as:
 - Dolar Kanadyjski
 - Dolar Nowozelandzki
 - Dolar Singapurski
+
+Screen kalkulatora walutowego 
+ ![Kalkulator walut](https://i.postimg.cc/9Xn84vy9/kalkulator-walut.png)
